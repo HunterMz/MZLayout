@@ -1,6 +1,5 @@
 //
 //  UIView+MZLayout.swift
-//  LearnSwift_001
 //
 //  Created by 猎人 on 2016/12/17.
 //  Copyright © 2016年 Hunter. All rights reserved.
@@ -10,8 +9,8 @@ import UIKit
 
 typealias Constraint = (UIView, NSLayoutAttribute, NSLayoutRelation, UIView?, NSLayoutAttribute, CGFloat, CGFloat) -> UIView
 typealias CGFloatClosure = (CGFloat) -> UIView
-extension UIView {
 
+extension UIView {
     func mz_setConstraint() -> Constraint {
         return {item, attr1, relation, toItem, attr2, multiplier, constant in
             
@@ -43,7 +42,6 @@ extension UIView {
     }
     
     /// self.left = toView.left + distance
-
     func mz_leftToLeft(toView: UIView, distance: CGFloat) -> UIView {
         return mz_sameAttributeWithDistance(toView: toView, attr: .left, distance: distance)
     }
